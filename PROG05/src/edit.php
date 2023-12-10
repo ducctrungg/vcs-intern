@@ -61,15 +61,6 @@ if (is_post_request()) {
         </strong>
       </div>
       <div class="row mb-3">
-        <label for="avatar_path" class="col-sm-2 col-form-label">Nhập URL hình ảnh <i>(Tùy chọn)</i></label>
-        <div class="col-sm-10">
-          <input type="text" class="form-control" id="avatar_path" name="avatar_path" />
-        </div>
-        <strong class="text-danger text-end mt-2">
-          <?= isset($errors['avatar_path']) ? $errors['avatar_path'] : '' ?>
-        </strong>
-      </div>
-      <div class="row mb-3">
         <label for="email" class="col-sm-2 col-form-label">Email</label>
         <div class="col-sm-10">
           <input type="text" class="form-control" id="email" name="email" value=<?= $data['email'] ?>>
