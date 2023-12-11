@@ -5,7 +5,7 @@ $result = get_all_table_db("assignment");
 
 if (is_post_request()) {
   [$inputs, $errors] = filter($_POST, [
-    'title' => 'string | required',
+    'title' => 'string|required',
     'description' => 'string',
   ]);
   check_file_valid($inputs, $errors, 'assignment_path');

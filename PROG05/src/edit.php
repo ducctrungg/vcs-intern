@@ -6,8 +6,8 @@ $inputs = [];
 $errors = [];
 if (is_post_request()) {
   [$inputs, $errors] = filter($_POST, [
-    'email' => 'email | email',
-    'phone' => 'string | min:10, max:10',
+    'email' => 'email|email',
+    'phone' => 'string|min:10, max:10',
     'url' => 'url',
     'description' => 'string'
   ]);

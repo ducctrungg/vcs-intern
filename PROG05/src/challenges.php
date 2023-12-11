@@ -23,7 +23,7 @@ $inputs = [];
 $errors = [];
 if (is_post_request()) {
   [$inputs, $errors] = filter($_POST, [
-    'challenge_hint' => 'string | required'
+    'challenge_hint' => 'string|required'
   ]);
   check_file_valid($inputs, $errors, 'challenge_path');
   if ($errors) {

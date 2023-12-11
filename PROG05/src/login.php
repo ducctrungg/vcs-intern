@@ -7,8 +7,8 @@ $errors = [];
 if (is_post_request()) {
 
   [$inputs, $errors] = filter($_POST, [
-    'username' => 'string | required',
-    'password' => 'string | required'
+    'username' => 'string|required',
+    'password' => 'string|required'
   ]);
 
   if ($errors) {

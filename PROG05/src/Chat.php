@@ -34,13 +34,12 @@ class Chat implements MessageComponentInterface
     echo sprintf(
       "%s", var_dump($data),
     );
-    $status = save_chat($data['from_id'], $data['to_id'], $data['message']);
-    $receive_user_data = get_detail_from_id('user', $data['to_id']);
+    // $status = save_chat($data['from_id'], $data['to_id'], $data['message']);
     foreach ($this->clients as $client) {
       if ($from == $client) {
         $data['from'] = 'Me';
       } else {
-        $receive_user_data = get_detail_from_id('user', $data['to_id']);
+        $receive_user_data = get_detail_from_id('user', $data['from_id']);
         $data['from'] = $receive_user_data['full_name'];
       }
       $client->send(json_encode($data));
