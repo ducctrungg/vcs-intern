@@ -1,15 +1,6 @@
 {
   "functions": {
-    "api/index.php": {
-      "runtime": "vercel-php@0.6.0"
-    },
-    "src/*": {
-      "runtime": "vercel-php@0.6.0"
-    },
-    "bin/*": {
-      "runtime": "vercel-php@0.6.0"
-    },
-    "public/*": {
+    "api/*.php": {
       "runtime": "vercel-php@0.6.0"
     }
   },
